@@ -1,0 +1,9 @@
+@model InventoryItem
+@{ ViewData["Title"] = "Delete Item"; }
+<h2>Delete Inventory Item</h2>
+<p>Are you sure you want to delete <strong>@Model.ItemName</strong>?</p>
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="ItemId" />
+    <button type="submit" class="btn btn-danger">Confirm Delete</button>
+    <a href="/Inventory/Index" class="btn btn-cancel">Cancel</a>
+</form>

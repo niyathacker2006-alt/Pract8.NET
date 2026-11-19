@@ -1,0 +1,31 @@
+@model InventoryItem
+@{ ViewData["Title"] = "Add Inventory Item"; }
+<h2>Add Inventory Item</h2>
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="ItemName"></label>
+        <input asp-for="ItemName" />
+        <span asp-validation-for="ItemName" style="color:red"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Category"></label>
+        <input asp-for="Category" />
+        <span asp-validation-for="Category" style="color:red"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Quantity"></label>
+        <input asp-for="Quantity" />
+        <span asp-validation-for="Quantity" style="color:red"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="UnitPrice"></label>
+        <input asp-for="UnitPrice" />
+        <span asp-validation-for="UnitPrice" style="color:red"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Supplier"></label>
+        <input asp-for="Supplier" />
+    </div>
+    <button type="submit" class="btn">Save Item</button>
+    <a href="/Inventory/Index" class="btn btn-cancel">Cancel</a>
+</form>
